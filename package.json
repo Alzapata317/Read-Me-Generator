@@ -1,0 +1,24 @@
+{
+  "name": "read-me-generator",
+  "version": "1.0.0",
+  "description": "An Assignent In which I will create a readme file through inquirer package",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alzapata317/Read-Me-Generator.git"
+  },
+  "keywords": [
+    "npm",
+    "node",
+    "inquirer"
+  ],
+  "author": "Alejandro Zapata",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alzapata317/Read-Me-Generator/issues"
+  },
+  "homepage": "https://github.com/Alzapata317/Read-Me-Generator#readme"
+}
