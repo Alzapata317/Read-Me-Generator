@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/Alzapata317/Read-Me-Generator/issues"
   },
-  "homepage": "https://github.com/Alzapata317/Read-Me-Generator#readme"
+  "homepage": "https://github.com/Alzapata317/Read-Me-Generator#readme",
+  "dependencies": {
+    "inquirer": "^9.0.1"
+  }
 }
