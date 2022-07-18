@@ -1,5 +1,5 @@
-const inquirer = require('inquirer')
-const fs = require('fs')
+const inquirer = require('inquirer');
+const fs = require('fs');
 
 const generateMD = ({
     title, 
@@ -11,7 +11,34 @@ const generateMD = ({
     license, 
     githubUsername, 
     email,
-})
+}) =>`# ${title}
+
+## Description
+
+${description}
+
+## Installation
+
+${installationInstructions}
+
+## Usage
+
+${usageInformation}
+
+## Contributing
+
+${contributionGuidelines}
+
+### Tests
+
+${testInstructions}
+
+### Questions
+
+For any questions you can reach me at my email ${email}. 
+And if you want to contact me through github do so at ${githubUsername}`;
+
+
 inquirer
     .prompt([
         {
@@ -63,3 +90,10 @@ inquirer
             validate: value => {if (value){return true} else{return 'I need a value to continue'}}
         }
     ])
+    .then ((answers) => {
+        const ReadMEContent = generateMD(answers);
+
+        fs.writeFile('README.md', ReadMEContent, (err) => 
+        err ? console.log(err) : console.log('Successfully created README file!')
+        );
+    });
